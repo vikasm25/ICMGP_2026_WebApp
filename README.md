@@ -65,7 +65,7 @@ The app has no backend, authentication system, or database. It reads public Exce
 ### Install and run
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/vikasm25/ICMGP_2026_WebApp.git
 cd ICMGP_App_20260922-main
 npm ci
 npm run dev
