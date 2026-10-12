@@ -339,26 +339,3 @@ npm run build
 ```
 
 Upload the generated `dist/` directory. Because navigation is held in React state and does not create separate browser routes, no SPA fallback rewrite is currently required for page navigation.
-
-## Validation and testing
-
-Before publishing changes, run:
-
-```bash
-npx oxlint src scripts vite.config.js
-npm run build
-npm run preview
-```
-
-Recommended manual checks:
-
-- Home page at phone, tablet, landscape, laptop, and desktop sizes.
-- Every programme date and the poster view.
-- Horizontal programme-table scrolling on smaller screens.
-- Search by abstract ID, title, author, and workshop lead.
-- Presentation and workshop detail modals.
-- Save and remove items from My Schedule, then reload the browser.
-- Pinned and popup announcement rendering.
-- External Google Maps and special-issue links.
-- Logos, backgrounds, sponsor images, and long text wrapping.
-- Browser console for missing files or workbook parsing errors.
