@@ -1,0 +1,59 @@
+/* Restored from the current hosted deployment; grouped by page and responsive behavior. */
+.map-cards{grid-template-columns:repeat(2,1fr);
+gap:16px;
+display:grid}
+
+.map-card{background:#fffffff5;
+border:1px solid #dfe5eb;
+border-radius:15px;
+align-items:flex-start;
+gap:15px;
+padding:20px;
+display:flex;
+box-shadow:0 2px 8px #1e375a0a}
+
+.map-card-icon{background:#edf4fb;
+border-radius:12px;
+flex:0 0 44px;
+justify-content:center;
+align-items:center;
+width:44px;
+height:44px;
+font-size:22px;
+display:flex}
+
+.map-card-content{flex:1;
+min-width:0}
+
+.map-card-content h3{color:#24476c;
+margin:0;
+font-family:Manrope,Inter,sans-serif;
+font-size:17px}
+
+.map-card-content p{color:#718096;
+margin:6px 0 14px;
+font-size:13px;
+line-height:1.4}
+
+.map-button{color:#fff;
+background:#174f91;
+border:0;
+border-radius:8px;
+padding:9px 13px;
+font-size:12px;
+font-weight:600}
+
+.map-button:hover{background:#123f73}
+
+@media (width<=900px) {.map-cards{grid-template-columns:1fr}
+}
+
+@media (width<=600px) {.map-card{padding:16px}
+.map-card-icon{flex-basis:40px;
+width:40px;
+height:40px}
+}
+
+@media (width<=420px) {.map-cards,.exhibitor-grid,.journal-partner-row-secondary{grid-template-columns:minmax(0,1fr)!important}
+.map-card,.sponsor-section-card,.announcement-card,.special-issue-card,.quick-info-card{padding-inline:14px}
+}

@@ -1,0 +1,203 @@
+/* Restored from the current hosted deployment; grouped by page and responsive behavior. */
+.presentation-modal-backdrop{z-index:500;
+background:#16243285;
+justify-content:center;
+align-items:center;
+padding:18px;
+display:flex;
+position:fixed;
+inset:0}
+
+.presentation-modal{background:#fff;
+border-radius:18px;
+flex-direction:column;
+width:min(100%,900px);
+max-height:min(90vh,880px);
+display:flex;
+overflow:hidden;
+box-shadow:0 20px 55px #0f233740}
+
+.presentation-modal-header{border-bottom:1px solid #e6ebf0;
+justify-content:space-between;
+align-items:flex-start;
+gap:16px;
+padding:20px 22px 17px;
+display:flex}
+
+.presentation-modal-kicker{color:#718096;
+margin-bottom:6px;
+font-size:12px;
+line-height:1.4}
+
+.presentation-modal-header h3{color:#24476c;
+margin:0;
+font-family:Manrope,Inter,sans-serif;
+font-size:19px;
+line-height:1.35}
+
+.presentation-modal-close{color:#536b84;
+background:#f3f6f9;
+border:0;
+border-radius:10px;
+flex:none;
+width:38px;
+height:38px;
+font-size:27px;
+line-height:1}
+
+.presentation-modal-close:hover{color:#24476c;
+background:#e9eef3}
+
+.presentation-modal-body{padding:16px 18px 22px;
+overflow-y:auto}
+
+.presentation-modal-summary{color:#174f91;
+margin-bottom:12px;
+font-size:12px;
+font-weight:700}
+
+.presentation-detail-list{flex-direction:column;
+gap:10px;
+display:flex}
+
+.presentation-detail-card{background:#fbfcfd;
+border:1px solid #dfe5eb;
+border-radius:14px;
+padding:15px 52px 15px 15px;
+position:relative}
+
+.presentation-detail-topline{color:#174f91;
+flex-wrap:wrap;
+gap:7px 14px;
+margin-bottom:8px;
+font-size:11px;
+font-weight:700;
+display:flex}
+
+.presentation-detail-card h4{color:#40536b;
+margin:0 0 11px;
+font-size:15px;
+line-height:1.45}
+
+.presentation-award-name{color:#718096;
+text-align:center;
+margin-top:2px;
+font-size:12px;
+line-height:1.45}
+
+.presentation-detail-field{color:#718096;
+grid-template-columns:95px minmax(0,1fr);
+gap:8px;
+padding-top:5px;
+font-size:12px;
+line-height:1.45;
+display:grid}
+
+.presentation-detail-field strong{color:#536b84}
+
+.presentation-save-button{position:absolute;
+bottom:12px;
+right:12px}
+
+.presentation-modal-note{color:#718096;
+margin-top:7px;
+font-size:11px;
+font-weight:500;
+line-height:1.45;
+display:block}
+
+.workshop-modal{max-width:760px}
+
+.workshop-detail-card{padding-right:52px}
+
+.workshop-justified-field>span,.workshop-person-bio{text-align:justify;
+text-justify:inter-word;
+white-space:pre-wrap;
+overflow-wrap:anywhere}
+
+.workshop-about-leads{border-top:1px solid #dfe5eb;
+margin-top:18px;
+padding-top:14px}
+
+.workshop-about-leads>h4{color:#40536b;
+margin:0 0 12px;
+font-size:15px}
+
+.workshop-people-list{gap:10px;
+display:grid}
+
+.workshop-person-card{background:#fff;
+border:1px solid #e1e6ec;
+border-radius:12px;
+padding:12px}
+
+.workshop-person-role{color:#174f91;
+letter-spacing:.04em;
+text-transform:uppercase;
+margin-bottom:4px;
+font-size:10px;
+font-weight:800}
+
+.workshop-person-card h4{color:#40536b;
+margin:0 0 3px;
+font-size:14px}
+
+.workshop-person-affiliation{color:#718096;
+margin-bottom:8px;
+font-size:12px;
+line-height:1.45}
+
+.workshop-person-bio{color:#718096;
+font-size:12px;
+line-height:1.55}
+
+@media (width<=600px) {.presentation-modal-backdrop{align-items:flex-end;
+padding:8px}
+.presentation-modal{border-radius:16px 16px 12px 12px;
+width:100%;
+max-height:92vh}
+.presentation-modal-header{padding:16px 14px 14px}
+.presentation-modal-header h3{font-size:16px}
+.presentation-modal-body{padding:13px 12px 18px}
+.presentation-detail-field{grid-template-columns:82px minmax(0,1fr);
+font-size:11px}
+}
+
+@media (width<=600px) {.workshop-modal{max-width:100%}
+.workshop-detail-card{padding-right:44px}
+}
+
+@media (width<=600px) {
+.presentation-modal-backdrop{overscroll-behavior:contain;
+align-items:flex-start;
+overflow-y:auto}
+.presentation-modal{width:100%;
+min-height:0;
+max-height:calc(100dvh - 16px);
+margin-block:0}
+.presentation-modal-header{min-width:0;
+padding:16px 58px 14px 14px;
+position:relative}
+.presentation-modal-header>div:first-child{min-width:0;
+max-width:100%}
+.presentation-modal-header h3{overflow-wrap:anywhere;
+word-break:break-word;
+max-width:100%}
+.presentation-modal-close{z-index:2;
+position:absolute;
+top:12px;
+right:12px}
+.presentation-modal-body{min-height:0}
+}
+
+@media (width<=600px) {.presentation-modal-backdrop{padding:max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+display:block;
+overflow-y:auto}
+.presentation-modal{width:100%;
+height:calc(100dvh - 16px);
+max-height:none;
+margin:0 auto}
+.presentation-modal-header{flex:none}
+.presentation-modal-body{flex:auto;
+min-height:0}
+}

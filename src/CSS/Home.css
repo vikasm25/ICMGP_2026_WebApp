@@ -1,0 +1,243 @@
+/* Keep the reference poster composition; reserve real space for every row. */
+.app.app-home {
+  --home-font: "Comic Neue", "Comic Sans MS", "Chalkboard SE", "Trebuchet MS", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  padding-bottom: var(--nav-height);
+}
+
+.app-home .app-header { flex: none; }
+.app-home .app-content-home {
+  flex: 1;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  container-type: size;
+}
+
+.icmgp-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background: #eef5fb;
+}
+.icmgp-home-canvas {
+  /* Fit the actual space below the header. Short screens scroll at a readable size. */
+  width: min(100%, 1074px, max(540px, calc(100cqh * 1074 / 1006)));
+  aspect-ratio: 1074 / 1006;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  container-type: size;
+  background: #edf4fb;
+}
+
+.icmgp-home-background, .icmgp-home-wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.icmgp-home-background { object-fit: cover; object-position: center; z-index: -2; }
+.icmgp-home-wash {
+  z-index: -1;
+  background: linear-gradient(#f8fbff7a 0%, #f8fbff66 22%, #f8fbff4d 34%, #f8fbff24 47%, #f8fbff00 61%);
+}
+
+.icmgp-home-content {
+  /* Statue axis is x=1101 in the 2160x1215 background (21px right of centre).
+     Match object-fit: cover's larger scale in both landscape and portrait. */
+  --home-statue-offset: max(.972222cqw, 1.728395cqh);
+  display: grid;
+  grid-template-rows: 14% minmax(min-content, 18%) minmax(min-content, 13%) minmax(min-content, 6%) minmax(min-content, 10%) minmax(60px, 1fr) auto;
+  justify-items: center;
+  align-items: center;
+  min-height: 100%;
+  height: 100%;
+  padding: 3% 2% 5%;
+}
+.icmgp-home-top-brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  height: 100%;
+  min-height: 0;
+}
+.icmgp-home-top-brands img { object-fit: contain; height: 100%; }
+.icmgp-home-life, .icmgp-home-moef { width: 18%; }
+.icmgp-home-main-logo {
+  position: relative;
+  width: 44%;
+  aspect-ratio: 824 / 320;
+  overflow: hidden;
+}
+.icmgp-home-main-logo img {
+  /* Frame the supplied artwork's transparent margins, preserving the original asset. */
+  position: absolute;
+  width: 130.83%;
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.icmgp-home-title {
+  width: 94%;
+  margin: 0;
+  font-family: var(--home-font);
+  font-size: clamp(18px, 4cqw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  text-align: center;
+  text-wrap: balance;
+  background: linear-gradient(90deg, #5578ff 0%, #776cf1 48%, #f05fbd 100%);
+  color: #6e70ef;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icmgp-home-title sup { font-size: .56em; line-height: 0; }
+.icmgp-home-desktop-break::after { content: ""; display: block; }
+.icmgp-home-portrait-break { display: none; }
+.icmgp-home-welcome {
+  transform: translateX(var(--home-statue-offset));
+  margin: 0;
+  font-family: var(--home-font);
+  font-size: clamp(22px, 4.2cqw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #d43a78;
+  text-shadow: 0 1px #fffffffa, 0 0 6px #ffffffeb, 0 2px 3px #18385c47;
+}
+.icmgp-home-supporters, .icmgp-home-sponsors {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 2%;
+  min-width: 0;
+}
+.icmgp-home-supporters {
+  position: relative;
+  width: 74%;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.2fr) minmax(0, .95fr);
+}
+.icmgp-home-supporter, .icmgp-home-sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  max-width: 100%;
+  padding: 3px;
+  background: rgb(255 255 255 / 20%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgb(255 255 255 / 72%), 0 0 20px rgb(255 255 255 / 38%);
+}
+.icmgp-home-supporter::before, .icmgp-home-sponsor-card::before {
+  content: "";
+  position: absolute;
+  inset: -15% -8%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #fffffff5 0%, #ffffff9e 42%, #fff0 78%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+.icmgp-home-supporter img, .icmgp-home-sponsor-card img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  min-width: 0;
+  filter: contrast(1.2) saturate(1.15) drop-shadow(0 1px 2px #ffffffb8);
+}
+.icmgp-home-supporter img { height: clamp(40px, 8cqw, 80px); }
+/* Retain each logo's row height; place these two on their shared vertical axes. */
+.icmgp-home-supporter:nth-child(2),
+.icmgp-home-supporter:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.icmgp-home-supporter:nth-child(2) {
+  left: calc(50% + var(--home-statue-offset));
+  width: calc(clamp(40px, 8cqw, 80px) * 1335 / 834 + 8px);
+  max-width: 28%;
+}
+.icmgp-home-supporter:nth-child(3) {
+  /* MoEFCC centre: 50% + (82% * (1 - 18%) / 2) of content width.
+     Convert that position to the supporters row's 74% width. */
+  left: 95.432432%;
+  width: calc(clamp(40px, 8cqw, 80px) * 600 / 646 + 8px);
+  max-width: 22%;
+}
+.icmgp-home-gold { grid-row: 7; width: 82%; min-width: 0; text-align: center; }
+.icmgp-home-gold h2 {
+  transform: translateX(var(--home-statue-offset));
+  color: #6f4e37;
+  margin: 0 0 .3em;
+  font-family: var(--home-font);
+  font-size: clamp(22px, 3.3cqw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.icmgp-home-sponsors { grid-template-columns: minmax(0, 1.15fr) minmax(0, .9fr) minmax(0, 1.85fr); }
+.icmgp-home-sponsor-card img { height: clamp(42px, 10.5cqw, 110px); }
+/* Narrow windows keep the phone composition even when a keyboard reduces height. */
+@media (width <= 480px), (orientation: portrait) and (width <= 1100px) {
+  .icmgp-home-canvas {
+    width: 100%;
+    height: 100cqh;
+    min-height: clamp(520px, 110vw, 1100px);
+    aspect-ratio: auto;
+  }
+  .icmgp-home-content {
+    grid-template-rows: 14% minmax(min-content, 18%) minmax(min-content, 13%) minmax(min-content, 6%) minmax(min-content, 11%) minmax(70px, 1fr) auto;
+    padding: 2% max(8px, env(safe-area-inset-right)) 5% max(8px, env(safe-area-inset-left));
+  }
+  .icmgp-home-top-brands { width: 94%; }
+  .icmgp-home-life { width: 24%; }
+  .icmgp-home-moef { width: 28%; }
+  .icmgp-home-main-logo { width: min(64%, 360px); }
+  .icmgp-home-title { width: 96%; font-size: clamp(17px, 5cqw, 36px); }
+  .icmgp-home-desktop-break { display: none; }
+  .icmgp-home-portrait-break { display: inline; }
+  .icmgp-home-portrait-break::before { content: ""; display: block; }
+  .icmgp-home-welcome {
+    font-size: clamp(20px, 4.8cqw, 32px);
+  }
+  .icmgp-home-supporters { width: 98%; }
+  .icmgp-home-supporter { width: 100%; }
+  .icmgp-home-supporter:nth-child(2) {
+    width: 24%;
+  }
+  .icmgp-home-supporter:nth-child(3) {
+    /* Portrait MoEFCC: 94% brand row, 28% logo, 98% supporters row. */
+    left: 84.530612%;
+    width: 20%;
+  }
+  .icmgp-home-supporter img { height: clamp(38px, 13cqw, 78px); }
+  .icmgp-home-gold { width: 98%; }
+  .icmgp-home-gold h2 {
+    font-size: clamp(21px, 5cqw, 34px);
+  }
+  .icmgp-home-sponsors { grid-template-columns: minmax(0, 1.02fr) minmax(0, .8fr) minmax(0, 2.18fr); gap: 1.5%; }
+  .icmgp-home-sponsor-card { width: 100%; }
+  .icmgp-home-sponsor-card img { height: clamp(34px, 10.5cqw, 68px); }
+}
+
+@media (orientation: portrait) and (width >= 601px) and (width <= 1100px) {
+  .icmgp-home-life { width: 19%; }
+}

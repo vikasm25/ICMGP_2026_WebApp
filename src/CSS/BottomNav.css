@@ -1,0 +1,40 @@
+/* Shared height keeps page content above the fixed navigation and safe area. */
+:root {
+  --nav-content-height: var(--bottom-navigation-height, 68px);
+  --nav-height: calc(var(--nav-content-height) + env(safe-area-inset-bottom, 0px));
+}
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  position: fixed;
+  z-index: 200;
+  inset: auto 0 0;
+  height: var(--nav-height);
+  padding: 5px max(8px, env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  background: #ffffffeb;
+  border-top: 1px solid #dce3ea;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 -3px 12px #1e375a14;
+}
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  gap: 3px;
+  padding: 2px;
+  color: #7b8997;
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  font-size: var(--bottom-navigation-size, 11px);
+  font-weight: 600;
+}
+.nav-button:hover { background: #f3f6f9; }
+.nav-button.active { color: #174f91; background: #edf4fb; }
+.nav-button span:last-child { max-width: 100%; line-height: 1.15; text-align: center; overflow-wrap: anywhere; }
+@media (width <= 600px) {
+  .nav-button { font-size: clamp(9px, 2.6vw, var(--bottom-navigation-size, 11px)); gap: 2px; }
+}

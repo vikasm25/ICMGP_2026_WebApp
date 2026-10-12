@@ -1,0 +1,35 @@
+/* Restored from the current hosted deployment; grouped by page and responsive behavior. */
+.saved-list{flex-direction:column;
+gap:12px;
+display:flex}
+
+.saved-card{background:#fffffff5;
+border:1px solid #dfe5eb;
+border-radius:14px;
+padding:17px 52px 17px 17px;
+position:relative;
+box-shadow:0 2px 8px #1e375a0a}
+
+.saved-card-date{color:#174f91;
+margin-bottom:4px;
+font-size:13px;
+font-weight:700}
+
+.saved-card-time{color:#718096;
+margin-bottom:8px;
+font-size:12px}
+
+.saved-card-title{color:#40536b;
+font-size:15px;
+line-height:1.45}
+
+.saved-card-room{color:#718096;
+margin-top:7px;
+font-size:13px}
+
+.saved-card .save-button{position:absolute;
+bottom:12px;
+right:12px}
+
+.map-card,.sponsor-section-card,.announcement-card,.special-issue-card,.quick-info-card,.saved-card,.empty-state,.page-heading{min-width:0;
+max-width:100%}

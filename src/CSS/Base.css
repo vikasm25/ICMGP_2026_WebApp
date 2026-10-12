@@ -1,0 +1,198 @@
+/* Restored from the current hosted deployment; grouped by page and responsive behavior. */
+:root{--text:#6b6375;
+--text-h:#08060d;
+--bg:#fff;
+--border:#e5e4e7;
+--code-bg:#f4f3ec;
+--accent:#aa3bff;
+--accent-bg:#aa3bff1a;
+--accent-border:#aa3bff80;
+--social-bg:#f4f3ec80;
+--shadow:#0000001a 0 10px 15px -3px, #0000000d 0 4px 6px -2px;
+--sans:system-ui, "Segoe UI", Roboto, sans-serif;
+--heading:system-ui, "Segoe UI", Roboto, sans-serif;
+--mono:ui-monospace, Consolas, monospace;
+font:18px/145% var(--sans);
+letter-spacing:.18px;
+--lightningcss-light:initial;
+--lightningcss-dark: ;
+color-scheme:light dark;
+color:var(--text);
+background:var(--bg);
+font-synthesis:none;
+text-rendering:optimizelegibility;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale}
+
+body{margin:0}
+
+#root{text-align:center;
+border-inline:1px solid var(--border);
+box-sizing:border-box;
+flex-direction:column;
+width:1126px;
+max-width:100%;
+min-height:100svh;
+margin:0 auto;
+display:flex}
+
+h1,h2{font-family:var(--heading);
+color:var(--text-h);
+font-weight:500}
+
+h1{letter-spacing:-1.68px;
+margin:32px 0;
+font-size:56px}
+
+h2{letter-spacing:-.24px;
+margin:0 0 8px;
+font-size:24px;
+line-height:118%}
+
+p{margin:0}
+
+code,.counter{font-family:var(--mono);
+color:var(--text-h);
+border-radius:4px;
+display:inline-flex}
+
+code{background:var(--code-bg);
+padding:4px 8px;
+font-size:15px;
+line-height:135%}
+
+*{box-sizing:border-box}
+
+html,body,#root{width:100%;
+min-height:100%;
+margin:0;
+padding:0}
+
+body{color:#26384d;
+letter-spacing:.01em;
+background:radial-gradient(circle at 12% 8%,#2374b517,#0000 28%),radial-gradient(circle at 88% 22%,#4da6cd12,#0000 30%),linear-gradient(#f7fbff 0%,#eef4f9 100%);
+font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
+
+button,a{font-family:inherit}
+
+button{cursor:pointer}
+
+.app{background:radial-gradient(circle at 50% -10%,#174f9112,#0000 34%),0 0;
+min-height:100vh;
+padding-bottom:76px}
+
+.app-content{width:100%;
+max-width:1100px;
+margin:0 auto;
+padding:28px 20px 40px}
+
+.signup-button{color:#fff;
+background:#174f91;
+border:0;
+border-radius:10px;
+justify-content:center;
+align-items:center;
+gap:10px;
+width:fit-content;
+min-width:160px;
+margin:10px auto 0;
+padding:11px 34px;
+font-size:14px;
+font-weight:700;
+transition:transform .15s,background .15s,box-shadow .15s;
+display:flex;
+box-shadow:0 3px 9px #174f912e}
+
+.signup-button:hover{background:#123f73;
+transform:translateY(-1px);
+box-shadow:0 5px 12px #174f9138}
+
+.signup-button:active{transform:translateY(0)}
+
+.signup-arrow{font-size:20px;
+font-weight:400;
+line-height:1}
+
+.page-heading{margin-bottom:22px}
+
+.page-heading h2{color:#173f72;
+margin:0;
+font-family:Manrope,Inter,sans-serif;
+font-size:30px;
+line-height:1.2}
+
+.page-heading p{color:#718096;
+margin:7px 0 0;
+font-size:14px}
+
+.save-button{color:#a4afbb;
+cursor:pointer;
+background:0 0;
+border:0;
+padding:3px;
+font-size:24px;
+line-height:1}
+
+.save-button:hover{color:#d19b1d}
+
+.mobile-program-list{display:none}
+
+
+.session-card{background:#fffffff5;
+border:1px solid #dfe5eb;
+border-radius:13px;
+margin-bottom:10px;
+padding:15px;
+position:relative;
+box-shadow:0 2px 7px #1e375a0a}
+
+.session-card-time{color:#174f91;
+margin-bottom:6px;
+font-size:12px;
+font-weight:700}
+
+.session-card-title{color:#405a73;
+font-size:14px;
+line-height:1.45}
+
+.save-button.saved{color:#d19b1d}
+
+.empty-state{text-align:center;
+background:#fffffff5;
+border:1px solid #dfe5eb;
+border-radius:16px;
+padding:45px 25px}
+
+.empty-state-icon{color:#b3bdc8;
+font-size:42px}
+
+.empty-state h3{color:#40536b;
+margin:12px 0 7px;
+font-size:18px}
+
+.empty-state p{color:#7b8997;
+max-width:450px;
+margin:0 auto;
+font-size:14px;
+line-height:1.5}
+
+.frontiers-logo-wrap img{width:min(100%,560px);
+max-height:155px}
+
+.secondary-journal-logo-wrap{flex:0 280px;
+min-height:105px;
+padding:14px}
+
+.secondary-journal-logo-wrap img{width:min(100%,235px);
+max-height:78px}
+
+.nav-icon{font-size:20px;
+line-height:1}
+
+html{scroll-behavior:smooth;
+overflow-x:hidden}
+
+img,svg,video,canvas,button,input,select,textarea{max-width:100%}
+
+.app-content{padding-bottom:max(40px, calc(76px + env(safe-area-inset-bottom)))}
+

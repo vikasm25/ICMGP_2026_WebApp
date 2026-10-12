@@ -1,0 +1,41 @@
+/* Restored from the current hosted deployment; grouped by page and responsive behavior. */
+.special-issues-page{width:min(100%,900px);
+margin:0 auto}
+
+.special-issue-card{background:#fffffff5;
+border:1px solid #dfe6ed;
+border-radius:16px;
+margin-top:16px;
+padding:22px 22px 24px;
+box-shadow:0 3px 12px #1e375a0d}
+
+.special-issue-card h3{color:#24476c;
+margin:0 0 18px;
+font-family:Manrope,Inter,sans-serif;
+font-size:19px;
+line-height:1.35}
+
+.special-issue-field+.special-issue-field{border-top:1px solid #edf0f3;
+margin-top:16px;
+padding-top:16px}
+
+.special-issue-field strong{color:#536b84;
+margin-bottom:5px;
+font-size:13px;
+display:block}
+
+.special-issue-field p{color:#26384d;
+margin:0;
+font-size:14px;
+line-height:1.55}
+
+@media (width<=600px) {.special-issue-card{border-radius:15px;
+padding:18px 15px 20px}
+.special-issue-card h3{margin-bottom:15px;
+font-size:17px}
+.special-issue-field+.special-issue-field{margin-top:13px;
+padding-top:13px}
+.special-issue-field strong{font-size:12px}
+.special-issue-field p{font-size:13px;
+line-height:1.5}
+}
